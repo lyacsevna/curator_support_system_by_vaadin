@@ -1,67 +1,48 @@
-# Flow CRM Tutorial
+# Technical Specification for Developing the Support Module for the Curator of the Study Group
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+## 1. System description
+The development of the support module is intended to simplify the work of the curator of the study group with documentation and information about students. The module should provide convenient access to data and tools for managing information about students, their participation in events, academic performance, and other aspects.
 
-## Running the application
+## 2. Goals and Objectives
+- Create a unified interface for managing student information.
+- Provide the ability to track student participation in artistic activities, public events, and sports.
+- Simplify the work with documents regarding financial support and social scholarships.
+- Collect and analyze information about students' academic performance.
+- Manage information about students' accommodation in dormitories.
+- Keep records of penalties and rewards.
+- Develop and plan curator events.
+- Form a general dossier on group students and student activists.
 
-Open the project in an IDE. You can download the [IntelliJ community edition](https://www.jetbrains.com/idea/download) if you do not have a suitable IDE already.
-Once opened in the IDE, locate the `Application` class and run the main method using "Debug".
+## 3. Functional Requirements
 
-For more information on installing in various IDEs, see [how to import Vaadin projects to different IDEs](https://vaadin.com/docs/latest/getting-started/import).
+1. **Management of Student Information:**
+  - Ability to add, edit, and delete student data.
+  - Store information about full name, date of birth, specialty, contact information, and other personal data.
 
-If you install the Vaadin plugin for IntelliJ, you should instead launch the `Application` class using "Debug using HotswapAgent" to see updates in the Java code immediately reflected in the browser.
+2. **Documentation of Participation in Events:**
+  - A section for tracking student participation in artistic activities, public events, and sports.
+  - Ability to upload documents confirming participation.
 
-## Deploying to Production
+3. **Financial Support and Social Scholarships:**
+  - Record of students receiving financial support and social scholarships.
+  - Ability to add and edit information about amounts and conditions of receipt.
 
-The project is a standard Maven project. To create a production build, call 
+4. **Student Academic Performance:**
+  - A section for entering and analyzing information about students' academic performance.
+  - Ability to generate reports on academic performance.
 
-```
-./mvnw clean package -Pproduction
-```
+5. **Accommodation in Dormitories:**
+  - Record of students residing in dormitories, with the ability to add information about their place of residence.
 
-If you have Maven globally installed, you can replace `./mvnw` with `mvn`.
+6. **Penalties and Rewards:**
+  - A section for recording penalties and rewards for students, with the ability to add reasons and dates.
 
-This will build a JAR file with all the dependencies and front-end resources,ready to be run. The file can be found in the `target` folder after the build completes.
-You then launch the application using 
-```
-java -jar target/flowcrmtutorial-1.0-SNAPSHOT.jar
-```
+7. **Curator Work Plan:**
+  - Ability to create and edit the curator's event plan.
+  - Record of conducted events and their outcomes.
 
-## Project structure
+8. **General Information about Group Students:**
+  - Formation of a general dossier on group students with filtering and search capabilities.
 
-- `MainLayout.java` in `src/main/java` contains the navigation setup (i.e., the
-  side/top bar and the main menu). This setup uses
-  [App Layout](https://vaadin.com/docs/components/app-layout).
-- `views` package in `src/main/java` contains the server-side Java views of your application.
-- `views` folder in `src/main/frontend` contains the client-side JavaScript views of your application.
-- `themes` folder in `src/main/frontend` contains the custom CSS styles.
-
-## Useful links
-
-- Read the documentation at [vaadin.com/docs](https://vaadin.com/docs).
-- Follow the tutorial at [vaadin.com/docs/latest/tutorial/overview](https://vaadin.com/docs/latest/tutorial/overview).
-- Create new projects at [start.vaadin.com](https://start.vaadin.com/).
-- Search UI components and their usage examples at [vaadin.com/docs/latest/components](https://vaadin.com/docs/latest/components).
-- View use case applications that demonstrate Vaadin capabilities at [vaadin.com/examples-and-demos](https://vaadin.com/examples-and-demos).
-- Build any UI without custom CSS by discovering Vaadin's set of [CSS utility classes](https://vaadin.com/docs/styling/lumo/utility-classes). 
-- Find a collection of solutions to common use cases at [cookbook.vaadin.com](https://cookbook.vaadin.com/).
-- Find add-ons at [vaadin.com/directory](https://vaadin.com/directory).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Forum](https://vaadin.com/forum).
-- Report issues, create pull requests in [GitHub](https://github.com/vaadin).
-
-
-## Deploying using Docker
-
-To build the Dockerized version of the project, run
-
-```
-mvn clean package -Pproduction
-docker build . -t flowcrmtutorial:latest
-```
-
-Once the Docker image is correctly built, you can test it locally using
-
-```
-docker run -p 8080:8080 flowcrmtutorial:latest
-```
+9. **Student Activists of the Group:**
+  - Record of students who are part of the student activist group, with the ability to add roles and responsibilities.
